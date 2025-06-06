@@ -1,0 +1,17 @@
+[build]
+  # Tells Netlify to change to the 'justbuilt/project' directory before running the build command
+  base    = "justbuilt/project/" 
+
+  # The command to build your Vite project
+  command = "npm run build" 
+
+  # The directory where your built site is outputted (relative to base)
+  publish = "dist/" 
+
+  # The directory for your serverless functions (relative to the root)
+  functions = "netlify/functions" 
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
